@@ -4,7 +4,8 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<ll, ll> ii;
+typedef long double ld;
+typedef pair<ll, ll> llll;
 
 enum line_type{
     normal,
@@ -28,16 +29,16 @@ struct fraction{
         a /= c, b /= c;
     }
 
-    operator ii() const{
-        return ii(a, b);
+    operator llll() const{
+        return llll(a, b);
     }
 };
 
 inline bool operator<(const fraction& f1, const fraction& f2){
-    if (ii(f1) == ii(f2)) return false;
-    if (ii(f1) == ii(-1, 0) || ii(f2) == ii(1, 0)) return true;
-    if (ii(f1) == ii(1, 0) || ii(f2) == ii(-1, 0)) return false;
-    return f1.a * f2.b < f2.a * f1.b;
+    if (llll(f1) == llll(f2)) return false;
+    if (llll(f1) == llll(-1, 0) || llll(f2) == llll(1, 0)) return true;
+    if (llll(f1) == llll(1, 0) || llll(f2) == llll(-1, 0)) return false;
+    return ld(f1.a) * ld(f2.b) < ld(f2.a) * ld(f1.b);
 }
 
 struct line{
@@ -86,7 +87,7 @@ inline fraction intersection(const line& l1, const line& l2){
 }
 
 inline bool operator<(const line& l1, const line& l2){
-    if (l1.t == normal && l2.t == normal) return ii(-l1.a, l1.b) < ii(-l2.a, l2.b);
+    if (l1.t == normal && l2.t == normal) return llll(-l1.a, l1.b) < llll(-l2.a, l2.b);
     if (l1.t == minus_infinity || l2.t == infinity) return true;
     if (l1.t == infinity || l2.t == minus_infinity) return false;
     if (l1.t == value) return fraction(l1.b) < intersection(*prev(*l2.it), l2);
