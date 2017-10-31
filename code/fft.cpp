@@ -5,7 +5,7 @@ using namespace std;
 
 typedef complex<double> com;
 
-void dft(vector<com>& p, int k){
+void dft(vector<com>& p, com mult){
     if (p.size() == 1) return;
 
     vector<com> p1(p.size() / 2), p2(p.size() / 2);
@@ -13,13 +13,17 @@ void dft(vector<com>& p, int k){
         if (i % 2 == 0) p1[i / 2] = p[i];
         else            p2[i / 2] = p[i];
 
-    com mult = polar(1., k * 2 * pi / p.size()), curr = 1;
-    dft(p1, k), dft(p2, k);
+    com curr = 1, new_mult = mult * mult;
+    dft(p1, new_mult), dft(p2, new_mult);
     loop(i, 0, p.size() / 2){
         com a = p1[i], b = curr * p2[i];
         p[i] = a + b, p[i + p.size() / 2] = a - b;
         curr *= mult;
     }
+}
+
+void dft(vector<com>& p, int k){
+    dft(p, polar(1., k * 2 * pi / p.size()));
 }
 
 vector<double> mul(const vector<double>& _p1, const vector<double>& _p2){
