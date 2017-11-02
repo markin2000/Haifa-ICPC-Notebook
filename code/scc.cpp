@@ -1,3 +1,4 @@
+//Not Tested
 #include<memory.h>
 struct edge{int e, nxt;};
 int V, E;

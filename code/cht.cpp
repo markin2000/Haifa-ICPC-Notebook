@@ -1,10 +1,3 @@
-#include <bits/stdc++.h>
-#define loop(i, a, n) for (ll i = a; i < ll(n); ++i)
-#define loop_rev(i, b, a) for (ll i = b; i >= ll(a); --i)
-using namespace std;
-
-typedef long long ll;
-typedef long double ld;
 typedef pair<ll, ll> llll;
 
 enum line_type{

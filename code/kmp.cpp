@@ -1,20 +1,13 @@
+//Not Tested
 /*
 Searches for the string w in the string s (of length k). Returns the
 0-based index of the first match (k if no match is found). Algorithm
 runs in O(k) time.
 */
 
-#include <iostream>
-#include <string>
-#include <vector>
-
-using namespace std;
-
-typedef vector<int> VI;
-
-void buildTable(string& w, VI& t)
+void buildTable(string& w, vi& t)
 {
-  t = VI(w.length());  
+  t = vi(w.length());  
   int i = 2, j = 0;
   t[0] = -1; t[1] = 0;
   
@@ -29,7 +22,7 @@ void buildTable(string& w, VI& t)
 int KMP(string& s, string& w)
 {
   int m = 0, i = 0;
-  VI t;
+  vi t;
   
   buildTable(w, t);  
   while(m+i < s.length())

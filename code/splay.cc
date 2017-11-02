@@ -1,6 +1,4 @@
-#include <cstdio>
-#include <algorithm>
-using namespace std;
+// Not Tested
 
 const int N_MAX = 130010;
 const int oo = 0x3f3f3f3f;

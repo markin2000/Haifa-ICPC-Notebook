@@ -1,11 +1,3 @@
-#include <bits/stdc++.h>
-#define loop(i, a, n) for (ll i = a; i < ll(n); ++i)
-#define loop_rev(i, b, a) for (ll i = b; i >= ll(a); --i)
-using namespace std;
-
-typedef long long ll;
-typedef pair<ll, ll> llll;
-
 struct fraction{
     ll a, b;
     fraction(ll _a, ll _b = 1) : a(_a), b(_b){}

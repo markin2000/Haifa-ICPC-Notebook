@@ -1,7 +1,4 @@
-#include <bits/stdc++.h>
-#define loop(i, a, n) for (int i = a; i < int(n); ++i)
 #define pi 3.14159265359
-using namespace std;
 
 typedef complex<double> com;
 

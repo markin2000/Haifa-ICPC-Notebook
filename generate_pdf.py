@@ -19,6 +19,7 @@ def get_sections():
             else:
                 tmp = line.split('\t', 1)
                 if len(tmp) == 1:
+                    print tmp
                     raise ValueError('Subsection parse error: %s' % line)
                 filename = tmp[0]
                 subsection_name = tmp[1]

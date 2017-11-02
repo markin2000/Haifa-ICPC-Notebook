@@ -3,53 +3,11 @@
 # Subsections within a section should follow the format:
 #   [filename within code directory][tab character \t][subsection title]
 
-[Combinatorial optimization]
-#MaxFlow.cc	Dense max-flow
-#Dinic.cc	Sparse max-flow
-#MinCostMaxFlow.cc	Min-cost max-flow
-#PushRelabel.cc	Push-relabel max-flow	
-#MinCostMatching.cc	Min-cost matching
-#MaxBipartiteMatching.cc	Max bipartite matchine
-#MinCut.cc	Global min-cut
-#GraphCutInference.cc	Graph cut inference
-#MaxFlow.java	Max-flow (Java)
-#MinCostMaxFlow.java	Min-cost max-flow (Java)
-
-[Geometry]
-#ConvexHull.cc	Convex hull
-#Geometry.cc	Miscellaneous geometry
-#JavaGeometry.java	Java geometry
-#Geom3D.java	3D geometry
-#Delaunay.cc	Slow Delaunay triangulation
-#Delaunay.java	Slow Delaunay triangulation (Java)
-
-[Numerical algorithms]
-#Euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
-#GaussJordan.cc	Systems of linear equations, matrix inverse, determinant
-#ReducedRowEchelonForm.cc	Reduced row echelon form, matrix rank
-#FFT_new.cc	Fast Fourier transform
-#Simplex.cc	Simplex algorithm
-#FFT.cc	Fast Fourier transform (C++)
-
-[Graph algorithms]
-#BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
-#DijkstraFloyd.cc	Dijkstra and Floyd's algorithm (C++)
-#FastDijkstra.cc	Fast Dijkstra's algorithm
-#SCC.cc	Strongly connected components
-#EulerianPath.cc	Eulerian path
-#Kruskal.cc	Kruskal's algorithm
-#Prim.cc	Minimum spanning trees
-
-[Data structures]
-#SuffixArray.cc	Suffix array
-#BIT.cc	Binary Indexed Tree
-#UnionFind.cc	Union-find set
-#KDTree.cc	KD-tree
-#splay.cc	Splay tree
-#SegmentTreeLazy.java	Lazy segment tree
-#LCA.cc	Lowest common ancestor
 
 [Miscellaneous]
+template.cpp	Template
+io.cpp	Input/Output c++
+random_stl.cpp	Random STL stuff
 #LongestIncreasingSubsequence.cc	Longest increasing subsequence
 #Dates.cc	Dates
 #LogLan.java	Regular expressions
@@ -66,3 +24,72 @@
 #FastExpo.cc	Fast exponentiation
 #LCS.cc	Longest common subsequence
 #MillerRabin.c	Miller-Rabin Primality Test (C)
+
+
+
+#[Combinatorial optimization]
+#MaxFlow.cc	Dense max-flow
+#Dinic.cc	Sparse max-flow
+#MinCostMaxFlow.cc	Min-cost max-flow
+#PushRelabel.cc	Push-relabel max-flow	
+#MinCostMatching.cc	Min-cost matching
+#MaxBipartiteMatching.cc	Max bipartite matchine
+#MinCut.cc	Global min-cut
+#GraphCutInference.cc	Graph cut inference
+#MaxFlow.java	Max-flow (Java)
+#MinCostMaxFlow.java	Min-cost max-flow (Java)
+
+[Geometry]
+vectors.cpp	Geometry Vectors
+convex_hull.cpp	Convex Hull
+circles.cpp	Minimal Bounding Circle
+
+#ConvexHull.cc	Convex hull
+#Geometry.cc	Miscellaneous geometry
+#JavaGeometry.java	Java geometry
+#Geom3D.java	3D geometry
+#Delaunay.cc	Slow Delaunay triangulation
+#Delaunay.java	Slow Delaunay triangulation (Java)
+
+[Numerical algorithms]
+gauss.cpp	Gauss Elimination
+fft.cpp	Fast Fourier Transform
+hadamard.cpp	Hadamard Transform
+subset_conv.cpp	Fast Subset Convolution
+
+#Euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
+#GaussJordan.cc	Systems of linear equations, matrix inverse, determinant
+#ReducedRowEchelonForm.cc	Reduced row echelon form, matrix rank
+#FFT_new.cc	Fast Fourier transform
+#Simplex.cc	Simplex algorithm
+#FFT.cc	Fast Fourier transform (C++)
+
+[Graph algorithms]
+scc.cpp	Strongly Connected Components
+dijkstra.cpp	Dijkstra
+dinic.cpp	Dinic Max Flow
+max_bipartite_matching.cpp	Maximum Bipartite Matching
+dominator_general.cpp	Dominators
+#BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
+#DijkstraFloyd.cc	Dijkstra and Floyd's algorithm (C++)
+#FastDijkstra.cc	Fast Dijkstra's algorithm
+#SCC.cc	Strongly connected components
+#EulerianPath.cc	Eulerian path
+#Kruskal.cc	Kruskal's algorithm
+#Prim.cc	Minimum spanning trees
+
+[Data structures]
+union_find.cpp	Disjoint Sets (Union-Find)
+bit.cpp	Fenwick Tree
+splay.cc	Splay Tree
+cht.cpp	Convex Hull Trick
+linear_cht.cpp	Linear Convex Hull
+#SuffixArray.cc	Suffix array
+#BIT.cc	Binary Indexed Tree
+#UnionFind.cc	Union-find set
+#KDTree.cc	KD-tree
+#splay.cc	Splay tree
+#SegmentTreeLazy.java	Lazy segment tree
+#LCA.cc	Lowest common ancestor
+
+

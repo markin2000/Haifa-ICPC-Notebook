@@ -1,11 +1,4 @@
-#include <bits/stdc++.h>
-#define loop(i, a, n) for (int i = a; i < int(n); ++i)
-using namespace std;
-
-typedef long long ll;
-typedef vector<int> vi;
-typedef vector<vi> vvi;
-const unsigned int mod = 1'000'000'007;
+const unsigned int mod = 1'000'000''007;
 
 void trans(vi& p){
     int n = p.size();
