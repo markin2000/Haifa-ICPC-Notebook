@@ -1,4 +1,3 @@
-// Strictly increasing or not?
 
 vector<int> kmp(string T,string P){
 	int n = T.size();

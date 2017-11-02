@@ -1,3 +1,5 @@
+// Strictly increasing or not?
+
 vector<int> find_LIS(vector<int> &A){
     vector<int> best,ind(A.size(),-1);
     int last = 0;
