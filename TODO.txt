@@ -1,5 +1,25 @@
-* Write a faster FFT code.
-* Add fast Hadamard transform for solving the following problem:
-    Given A[], B[], find C[] such that
-      C[i] = sum_j A[j] B[i xor j]
-* Error-check the codes in stanford-cardinal-16 and merge them to the existing code base.
+
+* Geometry basics
+* Dates
+* Min cost max flow
+* min cost perfect matching (Hungarian)
+* Simplex
+* Segment tree with Lazy propagation
+* SA + LCP
+* Floyd Warshall
+* Bellman Ford
+* Euler path/circuit 
+* Miller Rabin
+* Chinese Reminder Theorem
+* Splay tree
+
+
+Too Easy:
+* DFS/BFS
+* Belman Ford
+* Fast exponent
+* Matrix multiplication
+* Kruskal / Prim
+* LCA
+* O(n log n)/O(1) RMQ?
+* Segment Tree

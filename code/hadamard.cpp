@@ -1,3 +1,8 @@
+//
+//Given A[], B[], find C[] such that
+//   C[i] = sum_j A[j] B[i xor j]
+//
+
 const unsigned int mod = 1'000'000''007;
 
 void trans(vi::iterator begin, vi::iterator end, int counter){

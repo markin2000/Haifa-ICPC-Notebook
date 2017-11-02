@@ -8,6 +8,48 @@
 template.cpp	Template
 io.cpp	Input/Output c++
 random_stl.cpp	Random STL stuff
+2-sat.cpp	2-SAT Solver
+kmp.cpp	Knuth-Morris-Pratt
+lis.cpp	Longest Increasing Subsequence
+lcs.cpp	Longest Common Subsequence
+
+
+[Geometry]
+vectors.cpp	Geometry Vectors
+convex_hull.cpp	Convex Hull
+circles.cpp	Minimal Bounding Circle
+
+
+[Numerical algorithms]
+gauss.cpp	Gauss Elimination
+fft.cpp	Fast Fourier Transform
+hadamard.cpp	Hadamard Transform
+subset_conv.cpp	Fast Subset Convolution
+number_theory.cpp	Number Theory
+more_number_theory.cpp	More Number Theory
+
+
+[Graph algorithms]
+scc.cpp	Strongly Connected Components
+dijkstra.cpp	Dijkstra
+dinic.cpp	Dinic Max Flow
+max_bipartite_matching.cpp	Maximum Bipartite Matching
+dominator_general.cpp	Dominators
+lca.cpp	Lowest Common Ancestor
+
+
+
+[Data structures]
+union_find.cpp	Disjoint Sets (Union-Find)
+bit.cpp	Fenwick Tree
+cht.cpp	Convex Hull Trick
+linear_cht.cpp	Linear Convex Hull
+segment_tree.cpp	Segment Tree
+
+
+
+
+
 #LongestIncreasingSubsequence.cc	Longest increasing subsequence
 #Dates.cc	Dates
 #LogLan.java	Regular expressions
@@ -24,10 +66,6 @@ random_stl.cpp	Random STL stuff
 #FastExpo.cc	Fast exponentiation
 #LCS.cc	Longest common subsequence
 #MillerRabin.c	Miller-Rabin Primality Test (C)
-
-
-
-#[Combinatorial optimization]
 #MaxFlow.cc	Dense max-flow
 #Dinic.cc	Sparse max-flow
 #MinCostMaxFlow.cc	Min-cost max-flow
@@ -38,38 +76,18 @@ random_stl.cpp	Random STL stuff
 #GraphCutInference.cc	Graph cut inference
 #MaxFlow.java	Max-flow (Java)
 #MinCostMaxFlow.java	Min-cost max-flow (Java)
-
-[Geometry]
-vectors.cpp	Geometry Vectors
-convex_hull.cpp	Convex Hull
-circles.cpp	Minimal Bounding Circle
-
 #ConvexHull.cc	Convex hull
 #Geometry.cc	Miscellaneous geometry
 #JavaGeometry.java	Java geometry
 #Geom3D.java	3D geometry
 #Delaunay.cc	Slow Delaunay triangulation
 #Delaunay.java	Slow Delaunay triangulation (Java)
-
-[Numerical algorithms]
-gauss.cpp	Gauss Elimination
-fft.cpp	Fast Fourier Transform
-hadamard.cpp	Hadamard Transform
-subset_conv.cpp	Fast Subset Convolution
-
 #Euclid.cc	Number theory (modular, Chinese remainder, linear Diophantine)
 #GaussJordan.cc	Systems of linear equations, matrix inverse, determinant
 #ReducedRowEchelonForm.cc	Reduced row echelon form, matrix rank
 #FFT_new.cc	Fast Fourier transform
 #Simplex.cc	Simplex algorithm
 #FFT.cc	Fast Fourier transform (C++)
-
-[Graph algorithms]
-scc.cpp	Strongly Connected Components
-dijkstra.cpp	Dijkstra
-dinic.cpp	Dinic Max Flow
-max_bipartite_matching.cpp	Maximum Bipartite Matching
-dominator_general.cpp	Dominators
 #BellmanFord.cc	Bellman-Ford shortest paths with negative edge weights (C++)
 #DijkstraFloyd.cc	Dijkstra and Floyd's algorithm (C++)
 #FastDijkstra.cc	Fast Dijkstra's algorithm
@@ -77,13 +95,6 @@ dominator_general.cpp	Dominators
 #EulerianPath.cc	Eulerian path
 #Kruskal.cc	Kruskal's algorithm
 #Prim.cc	Minimum spanning trees
-
-[Data structures]
-union_find.cpp	Disjoint Sets (Union-Find)
-bit.cpp	Fenwick Tree
-splay.cc	Splay Tree
-cht.cpp	Convex Hull Trick
-linear_cht.cpp	Linear Convex Hull
 #SuffixArray.cc	Suffix array
 #BIT.cc	Binary Indexed Tree
 #UnionFind.cc	Union-find set
@@ -91,5 +102,3 @@ linear_cht.cpp	Linear Convex Hull
 #splay.cc	Splay tree
 #SegmentTreeLazy.java	Lazy segment tree
 #LCA.cc	Lowest common ancestor
-
-
