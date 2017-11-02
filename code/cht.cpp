@@ -96,7 +96,7 @@ struct cht{
     }
 
     void insert_line(const line& l){
-        set<line>::iterator it2 = s.lower_bound(l), it1 = prev(it2);
+        set<line>::iterator it2 = s.upper_bound(l), it1 = prev(it2);
         if (it1 != s.begin() && (it1->a == l.a || !(intersection(*it1, l) < intersection(*it1, *it2)))) return;
         if (it2 != prev(s.end()) && l.a == it2->a) ++it2;
         while (it1 != s.begin() && !(intersection(*prev(it1), *it1) < intersection(*it1, l))) --it1;
