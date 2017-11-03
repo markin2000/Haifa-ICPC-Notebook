@@ -43,7 +43,7 @@ lca.cpp	Lowest Common Ancestor
 union_find.cpp	Disjoint Sets (Union-Find)
 bit.cpp	Fenwick Tree
 cht.cpp	Convex Hull Trick
-linear_cht.cpp	Linear Convex Hull
+linear_cht.cpp	Linear Convex Hull Trick
 segment_tree.cpp	Segment Tree
 
 

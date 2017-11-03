@@ -23,12 +23,17 @@
     showstringspaces=false,
     basicstyle=\fontsize{5.5}{6}\ttfamily,
 }
+\lstset{
+    emph={pair, vector, string, stack, queue, deque, map, unordered_map, unordered_set, set, multiset, complex, max_elements, min_element, sort, resize, assign, find, upper_bound, lower_bound, fill, \#include, \#define, cin, cout, cerr, endl, back, front, empty, next_permutation, random_shuffle,  begin, end, erase, insert, unique, size, swap, push_back, pop_back, pop, max, min, setprecision, iterator},
+    emphstyle=\bfseries\color{green!50!black}
+}
 \lstdefinestyle{cpp}{
 	style=shared,
     language=C++,
-    keywordstyle=\bfseries\color{green!40!black},
+    %basicstyle=\color{black},
+    keywordstyle=\bfseries\color{blue!60!black},
     commentstyle=\itshape\color{red!80!black},
-    identifierstyle=\color{blue},
+    identifierstyle=\color{black},
     stringstyle=\color{purple!40!black},
 }
 \lstdefinestyle{java}{
