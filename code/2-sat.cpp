@@ -1,10 +1,3 @@
-#include <bits/stdc++.h>
-#define loop(i, a, n) for (int i = a; i < int(n); ++i)
-using namespace std;
-
-typedef pair<int, int> ii;
-typedef vector<vector<int>> graph;
-
 void scc_dfs(const graph& G, int v, vector<int>& visit, vector<int>& stack){
     if (visit[v]) return;
 
