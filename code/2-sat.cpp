@@ -1,65 +1,49 @@
-// 2-SAT solver
-// linear time
+#include <bits/stdc++.h>
+#define loop(i, a, n) for (int i = a; i < int(n); ++i)
+using namespace std;
 
-struct SatInstance {
-    int nvars, n, nc;
-    int maxv;
-    vi root, comp, size, vis;
-    stack<int> s;
-    vvi adj;
+typedef pair<int, int> ii;
+typedef vector<vector<int>> graph;
 
-    SatInstance(int nv) : nvars(nv) {
-        n=0;
-        maxv = 2*nv+2; //max Verticies, maybe set to 1000 or similar
-        adj = vvi(maxv);
-    }
+void scc_dfs(const graph& G, int v, vector<int>& visit, vector<int>& stack){
+    if (visit[v]) return;
 
-    inline int T(int x){return 2*x;}
-    inline int F(int x){return 2*x+1;}
+    visit[v] = true;
+    for (auto& x : G[v]) scc_dfs(G, x, visit, stack);
+    stack.push_back(v);
+}
 
-    void AddClause(int x, bool bx, int y, bool by ) { // (x = bx or y = by) and ....
-        int hipx, hipy , tx, ty;
-        if (bx)
-            hipx = F(x) , ty = T(x);
-        else
-            hipx = T(x) , ty = F(x);
+void scc_dfs(const graph& G, int v, int s, vector<int>& visit, vector<int>& res){
+    if (visit[v]) return;
 
-        if (by)
-            hipy = F(y) , tx = T(y);
-        else
-            hipy = T(y) , tx = F(y);
-        adj[hipx].push_back(tx);
-        adj[hipy].push_back(ty);
-        n = max(n, max(hipx, hipy));
-    }
+    visit[v] = true;
+    res[v] = s;
+    for (auto& x : G[v]) scc_dfs(G, x, s, visit, res);
+}
 
-    void SCC() {
-        root = comp = size = vis = vi(maxv);
-        nc = 0;
-        for (int i = 1; i <= n; ++i)
-            if (!vis[i])
-                tarjan(i, 0);
-    }
-    void tarjan(int v, int d) {
-        root[v] = d; vis[v]=1; s.push(v);
-        for (size_t i = 0; i < adj[v].size(); ++i) {
-            if (!vis[adj[v][i]])
-                tarjan(adj[v][i], d+1);
-            if (comp[adj[v][i]] == 0)
-                root[v] = min(root[v], root[adj[v][i]]);
-        }
-        if (root[v] == d) {
-            comp[v] = ++nc;
-            for (size[nc] = 1; s.top() != v; s.pop(), size[nc]++)
-                comp[s.top()] = nc;
-            s.pop();
-        }
-    }
-    bool IsSatisfiable() {
-        SCC();
-        bool ok = true;
-        for (int i = 1; ok && i <= nvars; ++i)
-            ok = comp[T(i)] != comp[F(i)];
-        return ok;
-    }
-};
+inline vector<int> scc_t_sort(const graph& G){
+    graph G_rev(G.size());
+    loop(i, 0, G.size()) for (auto& j : G[i]) G_rev[j].push_back(i);
+    vector<int> visit(G.size(), false), stack;
+    loop(i, 0, G.size()) scc_dfs(G, i, visit, stack);
+    visit.assign(G.size(), false);
+    vector<int> ret(G.size());
+    int counter = 0;
+    while (stack.size()) scc_dfs(G_rev, stack.back(), counter++, visit, ret), stack.pop_back();
+    return ret;
+}
+
+inline void add_or(graph& G, int a, int b, const vector<int>& not_v){
+    G[not_v[a]].push_back(b);
+    G[not_v[b]].push_back(a);
+}
+
+vector<int> sat_2(const vector<ii>& or_c, const vector<int>& not_v){
+    graph G(not_v.size());
+    for (auto& x : or_c) add_or(G, x.first, x.second, not_v);
+    vector<int> arr = scc_t_sort(G);
+    loop(i, 0, arr.size()) if (arr[i] == arr[not_v[i]]) return {};
+    vector<int> val(G.size());
+    loop(i, 0, arr.size()) if (arr[i] > arr[not_v[i]]) val[i] = true, val[not_v[i]] = false;
+    return val;
+}
