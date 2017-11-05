@@ -1,28 +1,26 @@
-// Strictly increasing or not?
+vector<int> LIS(vector<int> arr, bool strict = true){
+    static const int inf = 2e9;
+    vector<int> best(arr.size(), arr.size());
+    arr.push_back(inf);
+    vector<int> back(arr.size(), -1);
 
-vector<int> find_LIS(vector<int> &A){
-    vector<int> best,ind(A.size(),-1);
-    int last = 0;
-    for(int i = 0;i<A.size();i++){
-        int low = 0,high = best.size()-1;
-        while(low <= high){
-            int mid = (low+high)/2;
-            if(A[best[mid]]<=A[i])
-                ind[i] = mid,low = mid+1;
-            else
-                high = mid-1;
-        }
-        int p = ind[i]; if(ind[i] != -1) ind[i] = best[ind[i]];
-        if(p+1 == best.size())
-            best.push_back(i),last = i;
-        else
-            best[p+1] = i;
+    #define line(func) j = func(best.begin(), best.end(), i, [&arr](int a, int b){return arr[a] < arr[b];}) - best.begin()
+
+    loop(i, 0, arr.size() - 1){
+        int j;
+        if (strict) line(lower_bound);
+        else line(upper_bound);
+        if (j != 0) back[i] = best[j - 1];
+        best[j] = i;
     }
-    stack<int> res;
-    while(last != -1)
-        res.push(A[last]),last = ind[last];
-    vector<int> ans;
-    while(!res.empty())
-        ans.push_back(res.top()),res.pop();
-    return ans;
+
+    #undef line
+
+    int pos = 0;
+    while (pos < int(best.size()) - 1 && best[pos + 1] != int(arr.size()) - 1) ++pos;
+    pos = best[pos];
+    vector<int> ret;
+    while (pos != -1) ret.push_back(pos), pos = back[pos];
+    reverse(ret.begin(), ret.end());
+    return ret;
 }
