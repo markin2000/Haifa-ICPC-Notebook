@@ -6,6 +6,7 @@ vector<ii> convex_hull(vector<ii> S){
     int first = lowest_point(S);
     ii origin = S[first];
     S.erase(S.begin() + first);
+    //sort by angle
     sort(S.begin(), S.end(), [&origin](ii p1, ii p2){return ii(-cross(p1 - origin, p2 - origin), norm(p1 - origin)) < ii(0, norm(p2 - origin));});
 
     vector<ii> hull = {origin};

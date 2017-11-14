@@ -1,5 +1,3 @@
-//Not Tested
-
 vector<int> parent;
 
 void init(int n){

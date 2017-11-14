@@ -34,3 +34,12 @@ inline int sig(double x){
 inline double distance(ii a, ii b){
     return sqrt(norm(b - a));
 }
+
+ll area(vector<ii> shape){ // counter-clockwise
+    ll sum = 0;
+    while (shape.size() > 2){
+        sum += cross(shape[shape.size() - 2] - shape[0], shape[shape.size() - 1] - shape[0]);
+        shape.pop_back();
+    }
+    return sum;
+}

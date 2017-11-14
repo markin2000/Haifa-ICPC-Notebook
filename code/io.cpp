@@ -18,4 +18,9 @@ int main()
     
     // Output numerical values in hexadecimal
     cout << hex << 100 << " " << 1000 << " " << 10000 << dec << endl;
+
+    //print 6 digits after the point
+    printf("%.6f",(float)0.2426353);
+    cout.setprecision(6);
+    cout << fixed << 0.2426353 << endl;
 }

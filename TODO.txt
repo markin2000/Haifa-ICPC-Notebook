@@ -1,10 +1,10 @@
 Important:
+* Geometry basics - line intersection, distance from line, segment intersection
 * Segment tree with Lazy propagation
 * Floyd Warshall
 * Bellman Ford
-* O(n log n)/O(1) RMQ?
+* O(n log n)/O(1) RMQ
 * Dates
-* Geometry basics
 * Chinese Reminder Theorem
 
 Less important:

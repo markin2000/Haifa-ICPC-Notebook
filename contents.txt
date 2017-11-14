@@ -8,7 +8,7 @@
 template.cpp	Template
 io.cpp	Input/Output c++
 random_stl.cpp	Random STL stuff
-2-sat.cpp	2-SAT Solver
+2-sat_scc_t-sort.cpp	2-SAT Solver, SCC, T-Sort
 kmp.cpp	Knuth-Morris-Pratt
 lis.cpp	Longest Increasing Subsequence
 lcs.cpp	Longest Common Subsequence
@@ -30,7 +30,6 @@ more_number_theory.cpp	More Number Theory
 
 
 [Graph algorithms]
-scc.cpp	Strongly Connected Components
 dijkstra.cpp	Dijkstra
 dinic.cpp	Dinic Max Flow
 max_bipartite_matching.cpp	Maximum Bipartite Matching
@@ -42,9 +41,9 @@ lca.cpp	Lowest Common Ancestor
 [Data structures]
 union_find.cpp	Disjoint Sets (Union-Find)
 bit.cpp	Fenwick Tree
+segment_tree.cpp	Segment Tree
 cht.cpp	Convex Hull Trick
 linear_cht.cpp	Linear Convex Hull Trick
-segment_tree.cpp	Segment Tree
 
 
 
