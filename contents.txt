@@ -12,6 +12,8 @@ random_stl.cpp	Random STL stuff
 kmp.cpp	Knuth-Morris-Pratt
 lis.cpp	Longest Increasing Subsequence
 lcs.cpp	Longest Common Subsequence
+dates.py	Dates Python
+dates.cpp	Dates C++
 
 
 [Geometry]
@@ -27,6 +29,7 @@ hadamard.cpp	Hadamard Transform
 subset_conv.cpp	Fast Subset Convolution
 number_theory.cpp	Number Theory
 more_number_theory.cpp	More Number Theory
+apsp.cpp	All Pairs Shortest Paths (Floyd Warshall)
 
 
 [Graph algorithms]

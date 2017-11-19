@@ -35,6 +35,15 @@ inline double distance(ii a, ii b){
     return sqrt(norm(b - a));
 }
 
+bool inTriangle(ii a, ii b, ii c, ii p){
+    int sign1 = sign(cross(a-p,b-a));
+    int sign2 = sign(cross(b-p,c-b));
+    int sign3 = sign(cross(c-p,a-c));
+    if(max(sign1,max(sign2,sign3)) == 1 && min(sign1,min(sign2,sign3)) == -1)
+        return false;
+    return true;
+}
+
 ll area(vector<ii> shape){ // counter-clockwise
     ll sum = 0;
     while (shape.size() > 2){
